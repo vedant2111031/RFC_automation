@@ -40,6 +40,7 @@ def home():
 def start_crawl():
     url = request.form.get("url")
     thread = threading.Thread(target=run_crawler, args=(url,))
+    print("🚀 Script started")
     thread.start()
     return render_template("loading.html", url=url)
 
