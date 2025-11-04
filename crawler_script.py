@@ -14,6 +14,8 @@ from collections import defaultdict, deque
 # -------------------------
 # Config / Globals
 # -------------------------
+print("🚀 Python Crawler Script Started — Server is running this file")
+
 START_URL = "https://health-ee.netlify.app/"
 DOMAIN = urlparse(START_URL).netloc
 
