@@ -1,0 +1,7 @@
+flask
+gunicorn
+playwright
+pandas
+aiohttp
+beautifulsoup4
+requests
