@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            text-align: center;
+            padding: 40px;
+        }
+        h2 {
+            color: #2e7d32;
+            font-size: 28px;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 22px;
+            margin-top: 40px;
+        }
+        .button-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px; /* Adds spacing between buttons */
+            margin-top: 20px;
+        }
+        .btn {
+            text-decoration: none;
+            color: white;
+            background-color: #3498db;
+            padding: 12px 22px;
+            border-radius: 6px;
+            transition: 0.3s;
+            font-weight: bold;
+            display: inline-block;
+            min-width: 260px;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #2c82c9;
+            transform: scale(1.03);
+        }
+        /* Screenshot box */
+        .screenshot-box {
+            margin-top: 25px;
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .screenshot-box a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .screenshot-box a:hover {
+            text-decoration: underline;
+        }
+        .folder-icon {
+            font-size: 50px;
+            color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>✅ Crawl Completed Successfully!</h2>
+
+    <h3>📁 Download Tracking Files</h3>
+    <div class="button-list">
+        <a href="/download/cta_sdr_export.xlsx" class="btn">📊 CTA SDR Excel</a>
+        <a href="/download/user_flows.xlsx" class="btn">🧭 User Journey Flows</a>
+        <a href="/download/cta_form_tracking_map.json" class="btn">📄 JSON Output</a>
+        <a href="/download/cta_tracking_map.csv" class="btn">📎 CTA CSV</a>
+        <a href="/download/form_tracking_map.csv" class="btn">📝 Form CSV</a>
+    </div>
+
+    <h3>🖼 Screenshot Collection</h3>
+    <div class="screenshot-box">
+        <div class="folder-icon">📁</div>
+        <p>Screenshots saved in: <b>/screenshots/</b></p>
+        <a href="/download/screenshots.zip">⬇ Download All Screenshots (ZIP)</a>
+    </div>
+
+</body>
+</html>

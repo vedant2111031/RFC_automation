@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #141E30, #243B55);
+            color: white;
+        }
+        .loader {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+
+    <script>
+        setInterval(async () => {
+            const res = await fetch("/status");
+            const data = await res.json();
+
+            document.getElementById("current-url").innerText = data.current_url || "...";
+            document.getElementById("count").innerText = data.pages_crawled;
+
+            if (data.completed) {
+                window.location.href = "/results";
+            }
+        }, 2000);
+    </script>
+</head>
+<body>
+    <h2>⏳ Crawling website... Please wait</h2>
+    <div class="loader"></div>
+    <p><strong>Current Page:</strong> <span id="current-url">Loading...</span></p>
+    <p><strong>Pages Crawled:</strong> <span id="count">0</span></p>
+</body>
+</html>
